@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>VizGen - Random Password Generator</title>
+</head>
+<div class="jumbotron jumbotron-fluid text-dark">
+    <div class="container text-center">
+        <h1 class="display-4">VizGen Password Generator</h1>
+        <hr class="bg-dark">
+      </div>
+</div>
+<body>
+    <div class="container d-flex justify-content-center">
+        <form id="pass-length">
+            <div class="container">
+                <div class="row">
+                    <div class="form-group col-lg-12">
+                            <label>Choose Password Length (8-16 characters) </label>
+                            <input class="input-group" value="8" type="number" min="8" max="16" id="inputvalue" placeholder="Select Length">
+                            <button type="submit" id="makePass" class="btn btn-primary col-lg-12 my-2">Generate!</button>   
+                    </div>  
+                </div>  
+            </div>  
+        </form>
+    </div>
+    <div class="container d-flex justify-content-center" id="result">
+        <h3>Password: </h3>
+        
+    </div>
+
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
