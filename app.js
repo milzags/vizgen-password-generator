@@ -19,6 +19,10 @@ generateButton.addEventListener('click', function(ev) {
     ev.preventDefault();
     //get the integer value of the length selection on the page
     let passLength = parseInt(document.getElementById('inputvalue').value);
+    if (passLength < 8 || passLength > 32) {
+        alert('Please enter a valid number within the specified range (8-32)');
+    } else {
+    
     //select the div where the password result will be appended
     let passResult = document.getElementById('password-area');
     //create new <p> element to add to the result div -> pass added to this <p>
@@ -29,7 +33,7 @@ generateButton.addEventListener('click', function(ev) {
     passwordElement.innerText = newPass;
     passwordElement.classList.add('px-2');
     passwordElement.classList.add('font-weight-light')
-    
+    }
 });
 
     
