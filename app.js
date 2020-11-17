@@ -33,7 +33,7 @@ generateButton.addEventListener('click', function(ev) {
     passwordElement.innerText = newPass;
     passwordElement.classList.add('px-2');
     passwordElement.classList.add('font-weight-light')
-    }
+    }  
 });
 
     
