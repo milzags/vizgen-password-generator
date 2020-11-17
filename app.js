@@ -1,4 +1,3 @@
-
 //get the integer value of the length selection on the page
 let passLength = parseInt(document.getElementById('inputvalue').value);
 //select the div where the password result will be appended
@@ -32,21 +31,4 @@ function newPassword(passLength) {
     }
     return newPass;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
