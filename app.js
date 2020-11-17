@@ -17,22 +17,25 @@ let generateButton = document.querySelector('button');
 
 generateButton.addEventListener('click', function(ev) {
     ev.preventDefault();
+    //create new <H4> element to add to the result div -> pass added to this <h4>
+    let passwordElement = document.createElement('H4');
+    
     //get the integer value of the length selection on the page
     let passLength = parseInt(document.getElementById('inputvalue').value);
-    if (passLength < 8 || passLength > 32) {
+    if (passLength < 8 || passLength > 32 || passLength == null) {
         alert('Please enter a valid number within the specified range (8-32)');
     } else {
     
     //select the div where the password result will be appended
     let passResult = document.getElementById('password-area');
-    //create new <p> element to add to the result div -> pass added to this <p>
-    const passwordElement = document.createElement('H4');
+
     //invoke newPassword function with the pass length integer value   
     newPassword(passLength);
     passResult.append(passwordElement);
     passwordElement.innerText = newPass;
     passwordElement.classList.add('px-2');
     passwordElement.classList.add('font-weight-light')
+    
     }  
 });
 
