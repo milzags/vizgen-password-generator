@@ -1,13 +1,13 @@
 //get the integer value of the length selection on the page
 let passLength = parseInt(document.getElementById('inputvalue').value);
 //select the div where the password result will be appended
-let passResult = document.getElementById('result');
+let passResult = document.getElementById('password-area');
 //initialize the password as an empty string
 let newPass = '';
 // select the generate button
 let generateButton = document.getElementById('makePass');
 //create new <p> element to add to the result div -> pass added to this <p>
-let newP = document.createElement('P');
+const passwordElement = document.createElement('P');
  
 // function to create a new password - iterates over the chars string
 // and selects random chars based on the desired password length
@@ -17,8 +17,8 @@ generateButton.addEventListener('submit', function(ev) {
     ev.preventDefault();
     newPassword(passLength);
 
-    passResult.append(newP);
-    newP.innerText = newPass;
+    passResult.append(passwordElement);
+    passwordElement.innerText = newPass;
     // console.log(passLength);
     //invoke newPassword function with the pass length integer value       
 });
