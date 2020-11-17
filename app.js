@@ -5,7 +5,7 @@ let newPass = '';
 function newPassword(passLength) {
     
     let chars = 'qwertyuiop[]QWERTYUIOP{}|asdfghjkl;ASDFGHJKL:zxcvbnm,./ZXCVBNM<>?1234567890-=!@#$%^&*()_+'; 
-    for (let i = 0; i <= passLength; i++) {
+    for (let i = 0; i < passLength; i++) {
         newPass += chars.charAt(Math.floor(Math.random() * chars.length))
     }
     return newPass;
