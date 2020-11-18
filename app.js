@@ -1,9 +1,8 @@
-//initialize the password as an empty string
-let newPass = '';
 // function to create a new password - iterates over the chars string
 // and selects random chars based on the desired password length
 function newPassword(passLength) {
-    
+    //initialize the password as an empty string
+    let newPass = '';
     let chars = 'qwertyuiop[]QWERTYUIOP{}|asdfghjkl;ASDFGHJKL:zxcvbnm,./ZXCVBNM<>?1234567890-=!@#$%^&*()_+'; 
     for (let i = 0; i < passLength; i++) {
         newPass += chars.charAt(Math.floor(Math.random() * chars.length))
@@ -24,13 +23,11 @@ generateButton.addEventListener('click', function(ev) {
     } else {
     
     //select the div where the password result will be appended
-    let passResult = document.getElementById('password-area');
-    //create new <p> element to add to the result div -> pass added to this <p>
-    const passwordElement = document.createElement('H4');
-    //invoke newPassword function with the pass length integer value   
-    newPassword(passLength);
-    passResult.append(passwordElement);
-    passwordElement.innerText = newPass;
+    let passResult = document.getElementById('password-value');
+    
+    const passwordElement = document.getElementById('password-value');
+    //set inner text to the new password 
+    passwordElement.innerText = newPassword(passLength);
     passwordElement.classList.add('px-2');
     passwordElement.classList.add('font-weight-light')
     }  
