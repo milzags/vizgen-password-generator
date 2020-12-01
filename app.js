@@ -3,9 +3,13 @@
 function newPassword(passLength) {
     //initialize the password as an empty string
     let newPass = '';
-    let chars = 'qwertyuiop[]QWERTYUIOP{}|asdfghjkl;ASDFGHJKL:zxcvbnm,./ZXCVBNM<>?1234567890-=!@#$%^&*()_+'; 
+    let allChars = 'qwertyuiop[]QWERTYUIOP{}|asdfghjkl;ASDFGHJKL:zxcvbnm,./ZXCVBNM<>?1234567890-=!@#$%^&*()_+'; 
+    // let noCapsSymbolsNums = 'qwertyuiopasdfghjklzxcvbnm';
+    // let noCapsSymbols = 'qwertyuiopasdfghjklzxcvbnm1234567890';
+    // let noCaps = 'qwertyuiop[]asdfghjkl;,./1234567890-=!@#$%^&*()_+{}:<>?';
+
     for (let i = 0; i < passLength; i++) {
-        newPass += chars.charAt(Math.floor(Math.random() * chars.length))
+        newPass += allChars.charAt(Math.floor(Math.random() * allChars.length))
     }
     return newPass;
 };
@@ -34,4 +38,3 @@ generateButton.addEventListener('click', function(ev) {
     }  
 });
 
-    
